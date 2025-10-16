@@ -8,3 +8,7 @@ Técnicas utilizadas: K-Means Clustering, K-Nearest Neighbors (KNN).
 Herramientas: Python, Google Colab, pandas, scikit-learn.
 
 Tanto la base de datos como el proyecto se encuentran el el repositorio, en caso de querer probarlo, se recomienda hacer un fork junto a su pull request.
+
+ **Haz clic aquí para ver el notebook principal:**  
+ [Proyecto_Analisis_de_datos_César_Barrueto.ipynb](./Proyecto_Analisis_de_datos_César_Barrueto.ipynb)
+
