@@ -1,0 +1,185 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 470" width="960" height="470" role="img" aria-labelledby="title desc">
+  <title id="title">Customer segmentation pipeline</title>
+  <desc id="desc">2,240 customers are cleaned down to 2,191, K-Means finds 6 spending profiles shown as bubbles by income
+  and wine spend, a KNN model predicts whether a new customer spends a lot on wine, and an honest evaluation gives about
+  92 % accuracy against a 50 % baseline, instead of the 99 % reported with data leakage.</desc>
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+    .h { fill: #d1e4fa; font-size: 15px; font-weight: 600; }
+    .b { fill: #d1e4fa; font-size: 13px; }
+    .s { fill: #9da7ba; font-size: 11.5px; }
+    .m { fill: #d1e4fa; font-size: 12px; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .big { fill: #d1e4fa; font-size: 30px; font-weight: 700; }
+    .step { fill: #d1e4fa; font-size: 15px; font-weight: 500; }
+    .num { fill: #05060f; font-size: 13px; font-weight: 700; }
+  </style>
+  <rect width="960" height="470" rx="18" fill="#05060f"/>
+  <rect x="30" y="70" width="330" height="380" rx="12" fill="#0d1220" stroke="#2b3446" stroke-width="2"/>
+  <rect x="376" y="70" width="554" height="380" rx="12" fill="#0d1220" stroke="#2b3446" stroke-width="2"/>
+
+  <g opacity="0"><animate attributeName="opacity" dur="17.0s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0.0000;0.0000;0.0147;0.1382;0.1529;1.0000"/>
+    <text x="50" y="104" class="h">Raw data</text>
+    <text x="50" y="124" class="s">Customer Personality Analysis · Kaggle</text>
+    <g opacity="0"><animate attributeName="opacity" dur="17.0s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0.0000;0.0118;0.0188;0.1459;0.1529;1.0000"/><rect x="50" y="150" width="34" height="12" rx="3" fill="#5b6476" opacity="0.6"/><rect x="90" y="150" width="46" height="12" rx="3" fill="#5b6476" opacity="0.6"/><rect x="142" y="150" width="28" height="12" rx="3" fill="#5b6476" opacity="0.6"/><rect x="176" y="150" width="40" height="12" rx="3" fill="#5b6476" opacity="0.6"/><rect x="222" y="150" width="24" height="12" rx="3" fill="#5b6476" opacity="0.6"/><rect x="252" y="150" width="38" height="12" rx="3" fill="#5b6476" opacity="0.6"/></g>
+    <g opacity="0"><animate attributeName="opacity" dur="17.0s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0.0000;0.0188;0.0259;0.1459;0.1529;1.0000"/><rect x="50" y="172" width="34" height="12" rx="3" fill="#5b6476" opacity="0.6"/><rect x="90" y="172" width="46" height="12" rx="3" fill="#5b6476" opacity="0.6"/><rect x="142" y="172" width="28" height="12" rx="3" fill="#5b6476" opacity="0.6"/><rect x="176" y="172" width="40" height="12" rx="3" fill="#5b6476" opacity="0.6"/><rect x="222" y="172" width="24" height="12" rx="3" fill="#5b6476" opacity="0.6"/><rect x="252" y="172" width="38" height="12" rx="3" fill="#5b6476" opacity="0.6"/></g>
+    <g opacity="0"><animate attributeName="opacity" dur="17.0s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0.0000;0.0259;0.0329;0.1459;0.1529;1.0000"/><rect x="50" y="194" width="34" height="12" rx="3" fill="#5b6476" opacity="0.6"/><rect x="90" y="194" width="46" height="12" rx="3" fill="#5b6476" opacity="0.6"/><rect x="142" y="194" width="28" height="12" rx="3" fill="#5b6476" opacity="0.6"/><rect x="176" y="194" width="40" height="12" rx="3" fill="#5b6476" opacity="0.6"/><rect x="222" y="194" width="24" height="12" rx="3" fill="#5b6476" opacity="0.6"/><rect x="252" y="194" width="38" height="12" rx="3" fill="#5b6476" opacity="0.6"/></g>
+    <g opacity="0"><animate attributeName="opacity" dur="17.0s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0.0000;0.0329;0.0400;0.1459;0.1529;1.0000"/><rect x="50" y="216" width="34" height="12" rx="3" fill="#5b6476" opacity="0.6"/><rect x="90" y="216" width="46" height="12" rx="3" fill="#5b6476" opacity="0.6"/><rect x="142" y="216" width="28" height="12" rx="3" fill="#5b6476" opacity="0.6"/><rect x="176" y="216" width="40" height="12" rx="3" fill="#5b6476" opacity="0.6"/><rect x="222" y="216" width="24" height="12" rx="3" fill="#5b6476" opacity="0.6"/><rect x="252" y="216" width="38" height="12" rx="3" fill="#5b6476" opacity="0.6"/></g>
+    <g opacity="0"><animate attributeName="opacity" dur="17.0s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0.0000;0.0400;0.0471;0.1459;0.1529;1.0000"/><rect x="50" y="238" width="34" height="12" rx="3" fill="#5b6476" opacity="0.6"/><rect x="90" y="238" width="46" height="12" rx="3" fill="#5b6476" opacity="0.6"/><rect x="142" y="238" width="28" height="12" rx="3" fill="#5b6476" opacity="0.6"/><rect x="176" y="238" width="40" height="12" rx="3" fill="#5b6476" opacity="0.6"/><rect x="222" y="238" width="24" height="12" rx="3" fill="#5b6476" opacity="0.6"/><rect x="252" y="238" width="38" height="12" rx="3" fill="#5b6476" opacity="0.6"/></g>
+    <g opacity="0"><animate attributeName="opacity" dur="17.0s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0.0000;0.0471;0.0541;0.1459;0.1529;1.0000"/><rect x="50" y="260" width="34" height="12" rx="3" fill="#5b6476" opacity="0.6"/><rect x="90" y="260" width="46" height="12" rx="3" fill="#5b6476" opacity="0.6"/><rect x="142" y="260" width="28" height="12" rx="3" fill="#5b6476" opacity="0.6"/><rect x="176" y="260" width="40" height="12" rx="3" fill="#5b6476" opacity="0.6"/><rect x="222" y="260" width="24" height="12" rx="3" fill="#5b6476" opacity="0.6"/><rect x="252" y="260" width="38" height="12" rx="3" fill="#5b6476" opacity="0.6"/></g>
+    <g opacity="0"><animate attributeName="opacity" dur="17.0s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0.0000;0.0541;0.0612;0.1459;0.1529;1.0000"/><rect x="50" y="282" width="34" height="12" rx="3" fill="#5b6476" opacity="0.6"/><rect x="90" y="282" width="46" height="12" rx="3" fill="#5b6476" opacity="0.6"/><rect x="142" y="282" width="28" height="12" rx="3" fill="#5b6476" opacity="0.6"/><rect x="176" y="282" width="40" height="12" rx="3" fill="#5b6476" opacity="0.6"/><rect x="222" y="282" width="24" height="12" rx="3" fill="#5b6476" opacity="0.6"/><rect x="252" y="282" width="38" height="12" rx="3" fill="#5b6476" opacity="0.6"/></g>
+    <g opacity="0"><animate attributeName="opacity" dur="17.0s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0.0000;0.0612;0.0682;0.1459;0.1529;1.0000"/><rect x="50" y="304" width="34" height="12" rx="3" fill="#5b6476" opacity="0.6"/><rect x="90" y="304" width="46" height="12" rx="3" fill="#5b6476" opacity="0.6"/><rect x="142" y="304" width="28" height="12" rx="3" fill="#5b6476" opacity="0.6"/><rect x="176" y="304" width="40" height="12" rx="3" fill="#5b6476" opacity="0.6"/><rect x="222" y="304" width="24" height="12" rx="3" fill="#5b6476" opacity="0.6"/><rect x="252" y="304" width="38" height="12" rx="3" fill="#5b6476" opacity="0.6"/></g>
+    <g opacity="0"><animate attributeName="opacity" dur="17.0s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0.0000;0.0682;0.0753;0.1459;0.1529;1.0000"/><rect x="50" y="326" width="34" height="12" rx="3" fill="#5b6476" opacity="0.6"/><rect x="90" y="326" width="46" height="12" rx="3" fill="#5b6476" opacity="0.6"/><rect x="142" y="326" width="28" height="12" rx="3" fill="#5b6476" opacity="0.6"/><rect x="176" y="326" width="40" height="12" rx="3" fill="#5b6476" opacity="0.6"/><rect x="222" y="326" width="24" height="12" rx="3" fill="#5b6476" opacity="0.6"/><rect x="252" y="326" width="38" height="12" rx="3" fill="#5b6476" opacity="0.6"/></g>
+    <text x="50" y="378" class="big">2,240</text>
+    <text x="50" y="400" class="s">customers · 26 variables: income, age, family,</text>
+    <text x="50" y="416" class="s">2 years of spend by category, campaigns</text>
+  </g>
+  <g opacity="0"><animate attributeName="opacity" dur="17.0s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0.0000;0.1529;0.1676;0.2912;0.3059;1.0000"/>
+    <text x="50" y="104" class="h">Cleaning</text>
+    <g opacity="0"><animate attributeName="opacity" dur="17.0s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0.0000;0.1647;0.1735;0.2971;0.3059;1.0000"/>
+      <circle cx="58" cy="146" r="8" fill="#3fa66a"/>
+      <path d="M54,146 l3,3 l5,-6" stroke="#05060f" stroke-width="2" fill="none"/>
+      <text x="74" y="150" class="b">Drop rows with missing income</text>
+    </g>
+    <g opacity="0"><animate attributeName="opacity" dur="17.0s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0.0000;0.1853;0.1941;0.2971;0.3059;1.0000"/>
+      <circle cx="58" cy="180" r="8" fill="#3fa66a"/>
+      <path d="M54,180 l3,3 l5,-6" stroke="#05060f" stroke-width="2" fill="none"/>
+      <text x="74" y="184" class="b">Keep income &lt; 100k, born after 1940</text>
+    </g>
+    <g opacity="0"><animate attributeName="opacity" dur="17.0s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0.0000;0.2059;0.2147;0.2971;0.3059;1.0000"/>
+      <circle cx="58" cy="214" r="8" fill="#3fa66a"/>
+      <path d="M54,214 l3,3 l5,-6" stroke="#05060f" stroke-width="2" fill="none"/>
+      <text x="74" y="218" class="b">Drop odd labels and extreme meat spend</text>
+    </g>
+    <g opacity="0"><animate attributeName="opacity" dur="17.0s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0.0000;0.2265;0.2353;0.2971;0.3059;1.0000"/>
+      <circle cx="58" cy="248" r="8" fill="#3fa66a"/>
+      <path d="M54,248 l3,3 l5,-6" stroke="#05060f" stroke-width="2" fill="none"/>
+      <text x="74" y="252" class="b">Birth year → age · kids + teens → children</text>
+    </g>
+    <g opacity="0"><animate attributeName="opacity" dur="17.0s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0.0000;0.2471;0.2559;0.2971;0.3059;1.0000"/>
+      <circle cx="58" cy="282" r="8" fill="#3fa66a"/>
+      <path d="M54,282 l3,3 l5,-6" stroke="#05060f" stroke-width="2" fill="none"/>
+      <text x="74" y="286" class="b">Education, marital status → codes</text>
+    </g>
+    <text x="50" y="378" class="big" opacity="0">2,240<animate attributeName="opacity" dur="17.0s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0.0000;0.1529;0.1588;0.2529;0.2588;1.0000"/></text>
+    <text x="50" y="378" class="big" opacity="0" style="fill:#3fa66a">2,191<animate attributeName="opacity" dur="17.0s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0.0000;0.2588;0.2647;0.3000;0.3059;1.0000"/></text>
+    <text x="50" y="400" class="s">customers ready for modeling</text>
+  </g>
+  <g opacity="0"><animate attributeName="opacity" dur="17.0s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0.0000;0.3059;0.3206;0.5265;0.5412;1.0000"/>
+    <text x="50" y="104" class="h">K-Means · k = 6</text>
+    <text x="50" y="134" class="b">26 variables, standardized</text>
+    <text x="50" y="160" class="b">k chosen with the elbow method</text>
+    <text x="50" y="200" class="s">Each bubble on the right is a real centroid:</text>
+    <text x="50" y="218" class="s">income vs. wine spend, area = share of customers.</text>
+    <text x="50" y="300" class="m">silhouette = 0.09</text>
+    <text x="50" y="322" class="s">Profiles overlap: they are tendencies,</text>
+    <text x="50" y="340" class="s">not closed groups.</text>
+  </g>
+  <g opacity="0"><animate attributeName="opacity" dur="17.0s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0.0000;0.5412;0.5559;0.7618;0.7765;1.0000"/>
+    <text x="50" y="104" class="h">KNN · new customer</text>
+    <rect x="50" y="118" width="290" height="104" rx="8" fill="#151b2b" stroke="#2b3446"/>
+    <text x="64" y="140" class="m">income   66,000   age 52</text>
+    <text x="64" y="160" class="m">children 0        meat 380</text>
+    <text x="64" y="180" class="m">catalog  5        web  6</text>
+    <text x="64" y="200" class="m">wine     ???</text>
+    <text x="64" y="214" class="s">fictional customer</text>
+    <text x="50" y="252" class="b">21 nearest customers (wine hidden):</text>
+    <rect x="50" y="264" width="290" height="22" rx="6" fill="#5b6476" opacity="0.5"/>
+    <rect x="50" y="264" width="0" height="22" rx="6" fill="#c2456b"><animate attributeName="width" dur="17.0s" repeatCount="indefinite" values="0;0;234.76190476190476;234.76190476190476;0" keyTimes="0.0000;0.6000;0.6706;0.9824;1.0000"/></rect>
+    <text x="56" y="280" class="m" opacity="0" style="fill:#fff">17 big wine buyers · 4 not<animate attributeName="opacity" dur="17.0s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0.0000;0.6706;0.6824;0.7647;0.7765;1.0000"/></text>
+    <g opacity="0"><animate attributeName="opacity" dur="17.0s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0.0000;0.6941;0.7059;0.7647;0.7765;1.0000"/>
+      <rect x="50" y="306" width="290" height="44" rx="8" fill="none" stroke="#c2456b" stroke-width="2"/>
+      <text x="195" y="334" class="b" text-anchor="middle" style="font-weight:700">Prediction: big wine buyer</text>
+    </g>
+    <text x="50" y="384" class="s">Target: wine spend above the median (50 / 50).</text>
+    <text x="50" y="402" class="s">Wine spend and the cluster label are left out,</text>
+    <text x="50" y="418" class="s">so the model cannot cheat.</text>
+  </g>
+  <g opacity="0"><animate attributeName="opacity" dur="17.0s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0.0000;0.7765;0.7912;0.9676;0.9824;1.0000"/>
+    <text x="50" y="104" class="h">Accuracy</text>
+    <text x="50" y="136" class="b">Original notebook</text>
+    <rect x="50" y="146" width="270" height="26" rx="6" fill="#151b2b"/>
+    <rect x="50" y="146" width="0" height="26" rx="6" fill="#5b6476"><animate attributeName="width" dur="17.0s" repeatCount="indefinite" values="0;0;267.3;267.3;0" keyTimes="0.0000;0.7941;0.8412;0.9824;1.0000"/></rect>
+    <text x="309" y="164" class="m" text-anchor="end" opacity="0" style="fill:#fff;font-weight:700">≈ 99 %<animate attributeName="opacity" dur="17.0s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0.0000;0.8412;0.8529;0.9706;0.9824;1.0000"/></text>
+    <text x="50" y="190" class="s">leakage</text>
+    <text x="50" y="218" class="b">Honest KNN</text>
+    <rect x="50" y="228" width="270" height="26" rx="6" fill="#151b2b"/>
+    <rect x="50" y="228" width="0" height="26" rx="6" fill="#3fa66a"><animate attributeName="width" dur="17.0s" repeatCount="indefinite" values="0;0;249.2;249.2;0" keyTimes="0.0000;0.8118;0.8588;0.9824;1.0000"/></rect>
+    <text x="291" y="246" class="m" text-anchor="end" opacity="0" style="fill:#fff;font-weight:700">≈ 92 %<animate attributeName="opacity" dur="17.0s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0.0000;0.8588;0.8706;0.9706;0.9824;1.0000"/></text>
+    <text x="50" y="272" class="s">5-fold CV</text>
+    <text x="50" y="300" class="b">Always guess one class</text>
+    <rect x="50" y="310" width="270" height="26" rx="6" fill="#151b2b"/>
+    <rect x="50" y="310" width="0" height="26" rx="6" fill="#5b6476"><animate attributeName="width" dur="17.0s" repeatCount="indefinite" values="0;0;135.0;135.0;0" keyTimes="0.0000;0.8294;0.8765;0.9824;1.0000"/></rect>
+    <text x="177" y="328" class="m" text-anchor="end" opacity="0" style="fill:#fff;font-weight:700">50 %<animate attributeName="opacity" dur="17.0s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0.0000;0.8765;0.8882;0.9706;0.9824;1.0000"/></text>
+    <text x="50" y="354" class="s">baseline</text>
+    <line x1="50" y1="159" x2="320" y2="159" stroke="#e5534b" stroke-width="2.5" opacity="0"><animate attributeName="opacity" dur="17.0s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0.0000;0.8588;0.8706;0.9706;0.9824;1.0000"/></line>
+    <text x="50" y="410" class="s">The notebook fed wine spend and the cluster</text>
+    <text x="50" y="426" class="s">back into the model; the fix removes them.</text>
+  </g>
+  <text x="394" y="98" class="h">6 customer profiles</text>
+  <line x1="430" y1="400" x2="900" y2="400" stroke="#2b3446"/>
+  <line x1="430" y1="400" x2="430" y2="120" stroke="#2b3446"/>
+  <text x="900" y="422" class="s" text-anchor="end">annual income →</text>
+  <text x="438" y="124" class="s">↑ wine spend (2 years)</text>
+  <text x="497" y="422" class="s" text-anchor="middle">30k</text>
+  <text x="631" y="422" class="s" text-anchor="middle">50k</text>
+  <text x="766" y="422" class="s" text-anchor="middle">70k</text>
+  <line x1="430" y1="326" x2="900" y2="326" stroke="#2b3446" stroke-dasharray="3 6" opacity="0.6"/><text x="424" y="330" class="s" text-anchor="end">250</text>
+  <line x1="430" y1="253" x2="900" y2="253" stroke="#2b3446" stroke-dasharray="3 6" opacity="0.6"/><text x="424" y="257" class="s" text-anchor="end">500</text>
+  <line x1="430" y1="179" x2="900" y2="179" stroke="#2b3446" stroke-dasharray="3 6" opacity="0.6"/><text x="424" y="183" class="s" text-anchor="end">750</text>
+  <g opacity="0"><animate attributeName="opacity" dur="17.0s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0.0000;0.3294;0.3471;0.9647;0.9824;1.0000"/>
+    <circle cx="490.0" cy="392.5" r="35.2" fill="#2f92e8" fill-opacity="0.35" stroke="#2f92e8" stroke-width="2"/>
+    <text x="490.0" y="336.5" class="b" text-anchor="middle">Young low-income</text>
+    <text x="490.0" y="351.5" class="s" text-anchor="middle">25.3 % of customers</text>
+  </g>
+  <g opacity="0"><animate attributeName="opacity" dur="17.0s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0.0000;0.3559;0.3735;0.9647;0.9824;1.0000"/>
+    <circle cx="578.8" cy="377.8" r="33.9" fill="#2f92e8" fill-opacity="0.35" stroke="#2f92e8" stroke-width="2"/>
+    <text x="616.8" y="391.8" class="b" text-anchor="start">Older low-spend families</text>
+    <text x="616.8" y="406.8" class="s" text-anchor="start">23.4 % of customers</text>
+  </g>
+  <g opacity="0"><animate attributeName="opacity" dur="17.0s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0.0000;0.3824;0.4000;0.9647;0.9824;1.0000"/>
+    <circle cx="602.4" cy="347.9" r="6.6" fill="#2f92e8" fill-opacity="0.35" stroke="#2f92e8" stroke-width="2"/>
+    <text x="614.4" y="347.9" class="b" text-anchor="start">Small atypical group</text>
+    <text x="614.4" y="362.9" class="s" text-anchor="start">0.9 % of customers</text>
+  </g>
+  <g opacity="0"><animate attributeName="opacity" dur="17.0s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0.0000;0.4088;0.4265;0.9647;0.9824;1.0000"/>
+    <circle cx="687.8" cy="252.9" r="33.4" fill="#2f92e8" fill-opacity="0.35" stroke="#2f92e8" stroke-width="2"/>
+    <text x="651.8" y="222.9" class="b" text-anchor="end">Mid-income wine buyers</text>
+    <text x="651.8" y="237.9" class="s" text-anchor="end">22.8 % of customers</text>
+  </g>
+  <g opacity="0"><animate attributeName="opacity" dur="17.0s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0.0000;0.4353;0.4529;0.9647;0.9824;1.0000"/>
+    <circle cx="781.2" cy="252.6" r="31.4" fill="#2f92e8" fill-opacity="0.35" stroke="#2f92e8" stroke-width="2"/>
+    <text x="781.2" y="300.6" class="b" text-anchor="middle">Varied premium shoppers</text>
+    <text x="781.2" y="315.6" class="s" text-anchor="middle">20.1 % of customers</text>
+  </g>
+  <g opacity="0"><animate attributeName="opacity" dur="17.0s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0.0000;0.4618;0.4794;0.9647;0.9824;1.0000"/>
+    <circle cx="842.3" cy="137.9" r="19.0" fill="#c2456b" fill-opacity="0.35" stroke="#c2456b" stroke-width="2"/>
+    <text x="816.3" y="141.9" class="b" text-anchor="end">Wine premium</text>
+    <text x="816.3" y="156.9" class="s" text-anchor="end">7.4 % of customers</text>
+  </g>
+  <text x="912" y="441" class="s" text-anchor="end" opacity="0">Names are my interpretation of each profile's averages.<animate attributeName="opacity" dur="17.0s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0.0000;0.4941;0.5118;0.9647;0.9824;1.0000"/></text>
+  <g opacity="0"><animate attributeName="opacity" dur="17.0s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0.0000;0.0000;0.0118;0.1412;0.1529;1.0000"/>
+    <circle cx="44" cy="38" r="13" fill="#d1e4fa"/>
+    <text x="44" y="43" text-anchor="middle" class="num">1</text>
+    <text x="68" y="43" class="step">2,240 customers from a public marketing dataset</text>
+  </g>
+  <g opacity="0"><animate attributeName="opacity" dur="17.0s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0.0000;0.1529;0.1647;0.2941;0.3059;1.0000"/>
+    <circle cx="44" cy="38" r="13" fill="#d1e4fa"/>
+    <text x="44" y="43" text-anchor="middle" class="num">2</text>
+    <text x="68" y="43" class="step">Cleaning: nulls, outliers, text → numbers · 2,191 customers left</text>
+  </g>
+  <g opacity="0"><animate attributeName="opacity" dur="17.0s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0.0000;0.3059;0.3176;0.5294;0.5412;1.0000"/>
+    <circle cx="44" cy="38" r="13" fill="#d1e4fa"/>
+    <text x="44" y="43" text-anchor="middle" class="num">3</text>
+    <text x="68" y="43" class="step">K-Means groups them into 6 spending profiles</text>
+  </g>
+  <g opacity="0"><animate attributeName="opacity" dur="17.0s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0.0000;0.5412;0.5529;0.7647;0.7765;1.0000"/>
+    <circle cx="44" cy="38" r="13" fill="#d1e4fa"/>
+    <text x="44" y="43" text-anchor="middle" class="num">4</text>
+    <text x="68" y="43" class="step">KNN predicts a big wine buyer from everything except wine</text>
+  </g>
+  <g opacity="0"><animate attributeName="opacity" dur="17.0s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0.0000;0.7765;0.7882;0.9706;0.9824;1.0000"/>
+    <circle cx="44" cy="38" r="13" fill="#d1e4fa"/>
+    <text x="44" y="43" text-anchor="middle" class="num">5</text>
+    <text x="68" y="43" class="step">Honest evaluation: ≈ 92 % with 5-fold cross-validation</text>
+  </g>
+</svg>
